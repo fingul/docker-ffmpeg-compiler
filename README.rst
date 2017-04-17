@@ -6,13 +6,13 @@ If you want to cut right to the chase and install ffmpeg, ffprobe, and ffplay al
 
 .. code-block:: bash
 
-    bash -c "$(wget https://raw.githubusercontent.com/srwareham/docker-ffmpeg-compiler/master/install.sh -O -)"
+    bash -c "$(wget https://raw.githubusercontent.com/fingul/docker-ffmpeg-compiler/master/install.sh -O -)"
     
 or
 
 .. code-block:: bash
 
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/srwareham/docker-ffmpeg-compiler/master/install.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/fingul/docker-ffmpeg-compiler/master/install.sh)"
 
 The above downloads and executes a script that:
 
