@@ -9,7 +9,10 @@ FROM ubuntu:14.04
 # Example run
 # docker run --rm -it -v $(pwd):/host ffmpeg-compiler bash -c "cp /root/bin/ffmpeg /root/bin/ffprobe /root/bin/ffserver /host && chown $(id -u):$(id -g) /host/ffmpeg && chown $(id -u):$(id -g) /host/ffprobe && chown $(id -u):$(id -g) /host/ffserver"
 
-MAINTAINER srwareham
+MAINTAINER fingul
+
+RUN cd /etc/apt && \
+    sed -i 's/archive.ubuntu.com/ftp.daum.net/g' sources.list 
 
 # Get the dependencies
 RUN apt-get update \
@@ -80,7 +83,7 @@ RUN cd ~/ffmpeg_sources \
   --enable-libx264 \
   --enable-libx265 \
   --enable-nonfree \
-  --enable-vaapi
+  --enable-vaapi \
 ; PATH="$HOME/bin:$PATH" make \
 ; make install \
 ; make distclean \
