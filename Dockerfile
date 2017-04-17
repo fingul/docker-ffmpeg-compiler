@@ -80,6 +80,7 @@ RUN cd ~/ffmpeg_sources \
   --enable-libx264 \
   --enable-libx265 \
   --enable-nonfree \
+  --enable-vaapi
 ; PATH="$HOME/bin:$PATH" make \
 ; make install \
 ; make distclean \
